@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "linkedia"
+name = "src"
 version = "0.1.0"
 description = ""
 authors = ["aminelz <amine.laazizi@gmail.com>"]
@@ -7,7 +7,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pandas = "^2.2.1"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
 
 [build-system]
 requires = ["poetry-core"]
