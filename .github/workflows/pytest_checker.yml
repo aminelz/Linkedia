@@ -9,7 +9,7 @@ on:
   pull_request:
 
 jobs:
-  env_setup:
+  poetry_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -41,8 +41,5 @@ jobs:
         if: steps.cache-deps.outputs.cache-hit != 'true'
 
       - run: poetry install --no-interaction
-      
-  pytest:
-    runs-on: ubuntu-latest
-    steps:
+
       - run: poetry run pytest
